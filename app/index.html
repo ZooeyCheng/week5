@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>week5</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
   <link rel="stylesheet" href="./assets/style/all.css">
   <!-- CSS only -->
@@ -13,6 +13,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+  
+  <script src="https://cdn.ckeditor.com/ckeditor5/29.0.0/classic/ckeditor.js"></script>
 
 </head>
 <body>
@@ -158,67 +160,45 @@
                 </div>
               </div>
             </div>
+
+            <!-- editor  -->
+            <div class="collapse ms-0" id="collapseExample">
+              <div class="card card-body">
+                <div id="editor" >text hear</div>
+              </div>
+            </div>
           </div>
 
           <!-- 下方按鈕 -->
-          <div class="container-footer d-flex justify-content-between pt-4">
+          <div class="container-footer d-flex justify-content-between pt-4 pb-4">
             <div class="arrow">
               <a href="#"><i class="fas fa-chevron-left"></i></a>
               <a href="#"><i class="fas fa-chevron-right"></i></a>
             </div> 
             <div class="button">
               <button type="button" style="min-width:105px; height:35px; font-weight:bold;" class="btn btn-outline-success me-4">Mark as read</button>
-              <a href=""><button type="button" style="min-width:105px; height:35px; font-weight:bold;" class="btn btn-success">Reply</button></a>
+              <button type="button" style="min-width:105px; height:35px; font-weight:bold;" class="btn btn-success collapsed" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Reply</button>
             </div>
-
-
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-              Launch static backdrop modal
-            </button>
-
-            <!-- Modal -->
-            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    ...
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Understood</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-
-
-          </div>
           
+          </div>
         </div>
-
       </div>
-        
     </div>  
   </div>
-
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-  <!-- CKEditor 5套件 -->
   <script src="https://cdn.ckeditor.com/ckeditor5/29.1.0/classic/ckeditor.js"></script>
+
+  <!-- editor-->
   <script>
     ClassicEditor
-        .create( document.querySelector( '#editor' ) )
-        .catch( error => {
-            console.error( error );
-        } );
+      .create( document.querySelector( '#editor' ) )
+      .then( editor => {
+      console.log( editor );
+    } )
+      .catch( error => {
+      console.error( error );
+    } );
   </script>
+
 
 </body>
 
