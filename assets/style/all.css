@@ -2,12 +2,6 @@
   margin: 0 auto;
   padding: 0px; }
 
-i {
-  font-size: 24px;
-  height: 24px;
-  width: 24px;
-  margin-right: 16px; }
-
 .photo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -94,9 +88,10 @@ table {
     padding-left: 32px;
     position: absolute;
     bottom: 5%; }
-    .sidebar .writer h2 {
-      font-size: 16px; }
-    .sidebar .writer h3 {
+    .sidebar .writer .name {
+      font-size: 16px;
+      font-weight: bold; }
+    .sidebar .writer .mail {
       font-size: 14px; }
 
 .main {
@@ -133,8 +128,7 @@ table {
   .main .banner-end i {
     margin-right: 24px; }
   .main .container h4, .main .container small {
-    font-size: 12px;
-    font-weight: lighter; }
+    font-size: 12px; }
   .main .container h3 {
     font-size: 16px;
     font-weight: bold; }
@@ -144,5 +138,7 @@ table {
     color: #198754; }
   .main .container .button {
     font-weight: bold; }
+  .main .container .times {
+    font-size: 12px; }
 
 /*# sourceMappingURL=all.css.map */
