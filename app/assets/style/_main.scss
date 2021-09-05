@@ -40,7 +40,6 @@
     .container{
         h4 , small{
             font-size: $font-1;
-            font-weight: lighter;
         }
         h3{
             font-size: $font-3;
@@ -54,7 +53,10 @@
         }
         .button{
             font-weight: bold;
-            
+        }
+        .times{
+            font-size: $font-1;
+
         }
     }
         

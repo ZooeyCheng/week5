@@ -36,20 +36,12 @@
         padding-left: 32px;
         position: absolute;
         bottom: 5%;
-        // .photo{
-        //     display: flex;
-        //     align-items: center;
-        //     margin-right: 16px;
-        //     img{
-        //         border-radius: 50%;
-        //         height: 40px;
-        //         width: 40px;
-        //     }
-        // }
-        h2{
+
+        .name{
             font-size: $font-3;
+            font-weight: bold;
         }
-        h3{
+        .mail{
             font-size: $font-2;
         }
     }  
